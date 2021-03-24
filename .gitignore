@@ -9,6 +9,7 @@
 #           - Also handy if you have a large number of dependant pods
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
 Pods/
+Podfile.lock
 
 ### Swift ###
 # Xcode
@@ -17,6 +18,7 @@ Pods/
 
 ## User settings
 xcuserdata/
+*.xccheckout
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -110,5 +112,8 @@ iOSInjectionProject/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+### Custom ###
+.DS_Store
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
