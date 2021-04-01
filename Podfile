@@ -7,6 +7,7 @@ target 'SampleProject' do
 
   # Pods for SampleProject
   pod 'Alamofire', '~> 5.4.0'
+  pod 'SwiftLint'
 
   target 'SampleProjectTests' do
     inherit! :search_paths

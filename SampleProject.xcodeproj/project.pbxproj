@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00977CAA2608F5340096FF17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00977CA92608F5340096FF17 /* AppDelegate.swift */; };
-		00977CAC2608F5340096FF17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00977CAB2608F5340096FF17 /* SceneDelegate.swift */; };
 		00977CAE2608F5340096FF17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00977CAD2608F5340096FF17 /* ViewController.swift */; };
 		00977CB12608F5340096FF17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00977CAF2608F5340096FF17 /* Main.storyboard */; };
 		00977CB32608F5350096FF17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00977CB22608F5350096FF17 /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		00977CA62608F5340096FF17 /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00977CA92608F5340096FF17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00977CAB2608F5340096FF17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		00977CAD2608F5340096FF17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00977CB02608F5340096FF17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00977CB22608F5350096FF17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				00977CA92608F5340096FF17 /* AppDelegate.swift */,
-				00977CAB2608F5340096FF17 /* SceneDelegate.swift */,
 				00977CAD2608F5340096FF17 /* ViewController.swift */,
 				00977CAF2608F5340096FF17 /* Main.storyboard */,
 				00977CB22608F5350096FF17 /* Assets.xcassets */,
@@ -155,7 +152,6 @@
 				F289542376A30098ED9B5465 /* Pods-SampleProjectTests.debug.xcconfig */,
 				EDAFB8FBD1A39DDE914DFD31 /* Pods-SampleProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +177,7 @@
 				00977CA32608F5340096FF17 /* Frameworks */,
 				00977CA42608F5340096FF17 /* Resources */,
 				037DA0C9D2BD65E05091A27E /* [CP] Embed Pods Frameworks */,
+				00C2C8D6261624510092F2B5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -300,6 +297,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00C2C8D6261624510092F2B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		037DA0C9D2BD65E05091A27E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,7 +423,6 @@
 			files = (
 				00977CAE2608F5340096FF17 /* ViewController.swift in Sources */,
 				00977CAA2608F5340096FF17 /* AppDelegate.swift in Sources */,
-				00977CAC2608F5340096FF17 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -570,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
