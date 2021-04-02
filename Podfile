@@ -7,7 +7,9 @@ target 'SampleProject' do
 
   # Pods for SampleProject
   pod 'Alamofire', '~> 5.4.0'
-  pod 'SwiftLint'
+  pod 'SwiftLint', '~> 0.43.1'
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'FLEX', '~> 4.4.1'
 
   target 'SampleProjectTests' do
     inherit! :search_paths
