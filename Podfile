@@ -10,6 +10,7 @@ target 'SampleProject' do
   pod 'SwiftLint', '~> 0.43.1'
   pod 'SnapKit', '~> 5.0.1'
   pod 'FLEX', '~> 4.4.1'
+  pod 'CocoaLumberjack/Swift', '3.7.0'
 
   target 'SampleProjectTests' do
     inherit! :search_paths

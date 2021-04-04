@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import FLEX
+import CocoaLumberjack
 
 class ViewController: UIViewController {
     lazy var textLabel: UILabel = {
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DDLog.add(DDOSLogger.sharedInstance)
+        LogDebug(">>> viewDidLoad")
         
         view.backgroundColor = .white
         
