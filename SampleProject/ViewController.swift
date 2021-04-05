@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         DDLog.add(DDOSLogger.sharedInstance)
         LogDebug(">>> viewDidLoad")
         
+        AppUserDefaults.launchCount += 1
+        LogDebug(">>> launchCount: \(AppUserDefaults.launchCount)")
+        
         view.backgroundColor = .white
         
         view.addSubview(textLabel)
