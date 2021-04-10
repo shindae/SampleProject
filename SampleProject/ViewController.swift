@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         return label
     }()
     
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = Asset.appstore.image
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +41,13 @@ class ViewController: UIViewController {
             make.center.equalToSuperview()
             make.width.equalToSuperview()
             make.height.equalTo(100)
+        }
+        
+        view.addSubview(imageView)
+        imageView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(50)
+            make.bottom.equalToSuperview().offset(-100)
         }
     }
     

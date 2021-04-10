@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000B33152621E8F70088C03C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000B33142621E8F70088C03C /* Assets.swift */; };
 		00977CAA2608F5340096FF17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00977CA92608F5340096FF17 /* AppDelegate.swift */; };
 		00977CAE2608F5340096FF17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00977CAD2608F5340096FF17 /* ViewController.swift */; };
 		00977CB12608F5340096FF17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00977CAF2608F5340096FF17 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000B33142621E8F70088C03C /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		00977CA62608F5340096FF17 /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00977CA92608F5340096FF17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00977CAD2608F5340096FF17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,9 +125,9 @@
 				00C2C94B2616FAB40092F2B5 /* Logger.swift */,
 				00C2C978261A040F0092F2B5 /* AppUserDefaults.swift */,
 				00977CAF2608F5340096FF17 /* Main.storyboard */,
-				00977CB22608F5350096FF17 /* Assets.xcassets */,
 				00977CB42608F5350096FF17 /* LaunchScreen.storyboard */,
 				00977CB72608F5350096FF17 /* Info.plist */,
+				00B4FE54261C4292001785D1 /* Resources */,
 			);
 			path = SampleProject;
 			sourceTree = "<group>";
@@ -146,6 +148,15 @@
 				00977CCD2608F5350096FF17 /* Info.plist */,
 			);
 			path = SampleProjectUITests;
+			sourceTree = "<group>";
+		};
+		00B4FE54261C4292001785D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				000B33142621E8F70088C03C /* Assets.swift */,
+				00977CB22608F5350096FF17 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CF8834B4851E222477A2D3F9 /* Pods */ = {
@@ -318,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n#${PODS_ROOT}/SwiftGen/bin/swiftgen config run --config ${TARGETNAME}/Scripts/SwiftGen/swiftgen.yml\n${PODS_ROOT}/SwiftGen/bin/swiftgen run xcassets -t swift5 \"${TARGETNAME}/Resources/Assets.xcassets\" --output \"${TARGETNAME}/Resources/Assets.swift\"\n";
 		};
 		037DA0C9D2BD65E05091A27E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -430,6 +441,7 @@
 				00C2C979261A04100092F2B5 /* AppUserDefaults.swift in Sources */,
 				00977CAE2608F5340096FF17 /* ViewController.swift in Sources */,
 				00C2C94C2616FAB40092F2B5 /* Logger.swift in Sources */,
+				000B33152621E8F70088C03C /* Assets.swift in Sources */,
 				00977CAA2608F5340096FF17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -591,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -609,6 +621,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,6 +641,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

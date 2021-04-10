@@ -12,7 +12,8 @@ target 'SampleProject' do
   pod 'FLEX', '~> 4.4.1'
   pod 'CocoaLumberjack/Swift', '~> 3.7.0'
   pod 'SwiftyUserDefaults', '~> 5.3.0'
-
+  pod 'SwiftGen', '~> 6.4.0'
+  
   target 'SampleProjectTests' do
     inherit! :search_paths
     # Pods for testing

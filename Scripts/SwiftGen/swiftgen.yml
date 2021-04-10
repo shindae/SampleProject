@@ -1,0 +1,12 @@
+#xcassets:
+#  inputs:
+#    - ${TARGETNAME}/SampleProject/Resources/Assets.xcassets
+#  outputs:
+#    - templateName: swift5
+#      output: ${TARGETNAME}/SampleProject/Resources/Assets.swift
+
+xcassets:
+  - inputs: ${TARGETNAME}/SampleProject/Resources/Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: ${TARGETNAME}/SampleProject/Resources/Assets.swift
